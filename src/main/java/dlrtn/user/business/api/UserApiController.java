@@ -21,6 +21,7 @@ public class UserApiController {
 
     @PostMapping("")
     public ResponseEntity signUpUser(@RequestBody SignUpRequest request) {
+        userService.signUp(request);
         return new ResponseEntity("생성되었습니다.", HttpStatus.CREATED);
     }
 }
