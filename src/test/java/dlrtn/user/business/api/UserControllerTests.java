@@ -1,8 +1,9 @@
 package dlrtn.user.business.api;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import dlrtn.user.business.application.UserService;
-import dlrtn.user.business.model.payload.SignUpRequest;
+import dlrtn.user.business.user.application.UserService;
+import dlrtn.user.business.user.model.payload.SignUpRequest;
+import dlrtn.user.business.user.api.UserController;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,12 +38,12 @@ public class UserControllerTests {
 
         // when
         String body = mapper.writeValueAsString(
-                SignUpRequest.builder()
-                        .email(TEST_EMAIL)
-                        .username(TEST_USERNAME)
-                        .password(TEST_PASSWORD)
-                        .nickname(TEST_NICKNAME)
-                        .build());
+            SignUpRequest.builder()
+                .email(TEST_EMAIL)
+                .username(TEST_USERNAME)
+                .password(TEST_PASSWORD)
+                .nickname(TEST_NICKNAME)
+                .build());
         // then
         mockMvc.perform(post("/api/users")
                         .content(body)
