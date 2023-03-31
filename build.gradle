@@ -20,6 +20,9 @@ ext {
 	commons_collection_version = "4.4"
 	commons_lang_version = "3.12.0"
 	springdoc_openapi_version = "1.6.6"
+
+	// mybatis dependency
+	mybatis_version = "2.2.2"
 }
 
 dependencies {
@@ -28,6 +31,7 @@ dependencies {
 	implementation "org.springframework.boot:spring-boot-starter-jdbc"
 	implementation "org.springframework.boot:spring-boot-starter-web"
 	implementation "org.springframework.boot:spring-boot-starter-data-jpa"
+	implementation "org.mybatis.spring.boot:mybatis-spring-boot-starter:$mybatis_version"
 
 	// general development support library dependencies
 	implementation "org.apache.commons:commons-lang3:$commons_lang_version"

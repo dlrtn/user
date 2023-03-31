@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dlrtn.user.business.repository.UserMyBatisRepository">
+
+    <select id="existsByUsername" resultType="_boolean" parameterType="string">
+        SELECT
+            EXISTS (
+                    SELECT
+                        *
+                    FROM
+                        USER
+                    WHERE
+                        username = #{username}
+                    LIMIT 1)
+    </select>
+
+    <insert id="saveUser" parameterType="User">
+        INSERT INTO USER (
+                          email,
+                          username,
+                          password,
+                          nickname,
+                          user_role)
+        values (#{email},
+                #{username},
+                #{password},
+                #{nickname},
+                #{userType})
+    </insert>
+
+    <select id="findByUsername" resultType="User" parameterType="string">
+        SELECT
+            *
+        FROM
+            USER
+        WHERE
+            username = #{username}
+    </select>
+
+</mapper>
