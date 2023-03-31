@@ -1,6 +1,6 @@
-package dlrtn.user.business.repository;
+package dlrtn.user.business.user.repository;
 
-import dlrtn.user.business.model.domain.User;
+import dlrtn.user.business.user.model.domain.User;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper

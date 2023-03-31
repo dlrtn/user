@@ -1,7 +1,7 @@
-package dlrtn.user.business.api;
+package dlrtn.user.business.user.api;
 
-import dlrtn.user.business.application.UserService;
-import dlrtn.user.business.model.payload.SignUpRequest;
+import dlrtn.user.business.user.application.UserService;
+import dlrtn.user.business.user.model.payload.SignUpRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;

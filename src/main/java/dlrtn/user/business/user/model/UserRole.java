@@ -1,4 +1,4 @@
-package dlrtn.user.business.model;
+package dlrtn.user.business.user.model;
 
 public enum UserRole {
 

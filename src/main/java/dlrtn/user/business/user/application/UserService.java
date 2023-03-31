@@ -1,8 +1,8 @@
-package dlrtn.user.business.application;
+package dlrtn.user.business.user.application;
 
-import dlrtn.user.business.model.domain.User;
-import dlrtn.user.business.model.payload.SignUpRequest;
-import dlrtn.user.business.repository.UserMyBatisRepository;
+import dlrtn.user.business.user.model.domain.User;
+import dlrtn.user.business.user.model.payload.SignUpRequest;
+import dlrtn.user.business.user.repository.UserMyBatisRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -13,14 +13,21 @@ public class UserService {
     private final UserMyBatisRepository userMyBatisRepository;
 
     public void signUp(SignUpRequest request) {
+        //todo : nickname
+        //todo : password encoding
+
         User user = User.builder()
                 .email(request.getEmail())
                 .username(request.getUsername())
-                .password(request.getPassword())
                 .nickname(request.getNickname())
                 .build();
 
         userMyBatisRepository.saveUser(user);
+    }
+
+    public void login() {
+        //todo : login
+
     }
 
 }

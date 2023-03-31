@@ -1,4 +1,4 @@
-package dlrtn.user.business.model.payload;
+package dlrtn.user.business.user.model.payload;
 
 import lombok.Builder;
 import lombok.Getter;

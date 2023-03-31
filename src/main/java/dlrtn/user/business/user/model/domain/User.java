@@ -1,11 +1,9 @@
-package dlrtn.user.business.model.domain;
+package dlrtn.user.business.user.model.domain;
 
-import dlrtn.user.business.model.UserRole;
+import dlrtn.user.business.user.model.UserRole;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.ToString;
-
-import java.time.LocalDateTime;
 
 @Getter
 @Builder
